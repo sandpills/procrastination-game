@@ -5,16 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>procrastination game</title>
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>
+        .draggable {
+            width: 200px;
+            position: fixed;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".draggable").draggable();
+        });
+    </script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="game-header">
-            <h1>Procrastination Game</h1>
+
+    <div id="container">
+        <header>
+            <ul role="menu-bar">
+                <li role="menu-item" tabindex="0" aria-haspopup="true">
+                    File
+                    <ul role="menu">
+                        <li role="menu-item"><a href="#menu">Action</a></li>
+                        <li role="menu-item"><a href="#menu">Another Action</a></li>
+                        <li role="menu-item"><a href="#menu">Something else here</a></li>
+                    </ul>
+                </li>
+                <li role="menu-item" tabindex="0" aria-haspopup="true">
+                    Edit
+                    <ul role="menu">
+                        <li role="menu-item"><a href="#menu">Action</a></li>
+                        <li role="menu-item"><a href="#menu">Another Action</a></li>
+                        <li role="menu-item"><a href="#menu">Something else here</a></li>
+                    </ul>
+                </li>
+                <li role="menu-item" tabindex="0" aria-haspopup="true">
+                    View
+                    <ul role="menu">
+                        <li role="menu-item"><a href="#menu">Action</a></li>
+                        <li role="menu-item"><a href="#menu">Another Action</a></li>
+                        <li role="menu-item"><a href="#menu">Something else here</a></li>
+                    </ul>
+                </li>
+                <li role="menu-item" tabindex="0" aria-haspopup="true">
+                    Special
+                    <ul role="menu">
+                        <li role="menu-item"><a href="#menu">You</a></li>
+                        <li role="menu-item"><a href="#menu">Get the</a></li>
+                        <li role="menu-item"><a href="#menu">Idea</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+
+        <div class="window draggable">
+            <div class="title-bar">
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">emails</h1>
+                <button aria-label="Resize" class="resize"></button>
+            </div>
+            <div class="separator"></div>
+
+            <div class="window-pane">
+                <form>
+                    <label for="text_email">Email</label><br>
+                    <input id="text_email" type="email" placeholder="panic@thedis.co" /><br>
+                    <label for="text_pwd">Password</label><br>
+                    <input id="text_pwd" type="password" placeholder="password" /><br><br>
+                </form>
+            </div>
         </div>
-    </div>
+
+        <div class="window draggable">
+            <div class="title-bar">
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">minesweeper</h1>
+                <button aria-label="Resize" disabled class="hidden"></button>
+            </div>
+            <div class="separator"></div>
+
+            <div class="window-pane">
+            </div>
+        </div>
+
+        <div class="window draggable">
+            <div class="title-bar">
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">game</h1>
+                <button aria-label="Resize" disabled class="hidden"></button>
+            </div>
+            <div class="separator"></div>
+            <div class="window-pane"></div>
+        </div>
+
+        <div class="sticky draggable standard-dialog">
+            <h1>BIIIIG presentation sept 22!! gotta get crackin!!</h1>
+        </div>
+        <div class="sticky draggable standard-dialog">
+            <h1>sticky note 2</h1>
+        </div>
+        <div id="clock" class="standard-dialog center scale-down">
+            <div id="clock-face">
+                <div id="hour-hand"></div>
+                <div id="minute-hand"></div>
+                <div id="clock-center"></div>
+            </div>
+            <h1 class="dialog-text" id="date">1994.09.10</h1>
+        </div>
 </body>
+
+<script src="script.js"></script>
 
 </html>
