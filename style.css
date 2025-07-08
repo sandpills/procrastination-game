@@ -1,15 +1,115 @@
+@keyframes flash-red {
+    0% {
+        color: black;
+        background-color: yellow;
+    }
+
+    25% {
+        color: white;
+        background-color: red;
+    }
+
+    50% {
+        color: black;
+        background-color: yellow;
+    }
+
+    75% {
+        color: white;
+        background-color: red;
+    }
+
+    100% {
+        color: black;
+        background-color: yellow;
+    }
+
+}
+
+.window {
+    width: 350px;
+}
+
+.flashing {
+    animation: flash-red 1s ease-in-out;
+}
+
+.sticky {
+    width: 200px;
+    height: 200px;
+}
+
+h1.small-text {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.2;
+}
+
+#claire_email {
+    display: none;
+}
+
+.alert-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#email-alert {
+    display: none;
+}
+
+
+textarea {
+    font-family: inherit;
+    font-size: 12px;
+    border: 2px inset #c0c0c0;
+    background-color: #ffffff;
+    padding: 2px 4px;
+    margin: 2px 0;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: rgb(8, 8, 8);
+    color: #ffffff;
+}
+
 #container {
     height: 100vh;
     width: 100vw;
     position: fixed;
 }
 
+#to-do {
+    position: absolute;
+    /* width: 18vh;
+    height: 20vh; */
+    /* padding: 10px; */
+}
+
+#to-do .inner-border {
+    padding: 15px;
+}
+
 #clock {
     position: absolute;
-    width: 20vh;
-    height: 20vh;
+    width: 150px;
+    height: 150px;
     bottom: 20px;
     right: 20px;
+}
+
+#clock .inner-border {
+    padding: 10px;
+    height: 124px;
 }
 
 #clock-face {
@@ -22,10 +122,10 @@
     background-color: black;
     position: absolute;
     transform-origin: bottom center;
-    left: 45%;
-    top: 35%;
+    left: 38%;
+    top: 40%;
     width: 5px;
-    height: 60px;
+    height: 50px;
     margin-left: -2px;
     margin-top: -50px;
 }
@@ -34,10 +134,10 @@
     background-color: black;
     position: absolute;
     transform-origin: bottom center;
-    left: 45%;
-    top: 35%;
+    left: 38%;
+    top: 44%;
     width: 5px;
-    height: 80px;
+    height: 65px;
     margin-left: -2px;
     margin-top: -70px;
 }
@@ -47,11 +147,31 @@
     background-color: black;
     width: 8px;
     height: 8px;
-    left: 43%;
+    left: 36%;
     top: 38%;
 }
 
 #date {
     position: absolute;
     bottom: 0;
+}
+
+#presentation {
+    display: none;
+}
+
+#slide {
+    border: 1px solid black;
+    padding: 30px 10px;
+}
+
+.title_container {
+    display: flex;
+    justify-content: center;
+    border: 1px dashed black;
+    margin: 5px 0px;
+}
+
+.forum-text {
+    margin-bottom: 10px;
 }
